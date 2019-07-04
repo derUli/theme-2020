@@ -14,7 +14,7 @@
         "php"
     ],
     "author": "Ulrich Schmidt",
-    "license": "ISC",
+    "license": "GPL",
     "dependencies": {
         "fullpage.js": "^3.0.5"
     },
