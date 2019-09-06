@@ -1,8 +1,21 @@
-$(function () {
+// scroll to the given anchor
+const params = new URLSearchParams(location.search);
+const dir = location.href.substring(0,
+        location.href.lastIndexOf('/'));
+
+// redirect direct page urls to anchors
+const jumpTo = params.get('jumpto');
+
+if (jumpTo && jumpTo.length > 0) {
+    $("body").css("opacity", "0");
+    location.replace(`${dir}/#${jumpTo}`);
+}
+
+$(() => {
     $("footer").last().fadeIn();
 
     new fullpage('#fullpage', {
-        afterLoad: function (origin, destination, direction) {
+        afterLoad: (origin, destination) => {
             $(destination.item).find(".sliding").addClass("slide-in");
             $(destination.item).find(".text-content").addClass("move-up");
         },
@@ -12,5 +25,4 @@ $(function () {
         navigationPosition: 'right',
         verticalCentered: false
     });
-
 });
