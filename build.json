@@ -1,13 +1,13 @@
 {
 	"source" : "extend",
 	"id": "theme-2020",
-	"version": "1.0.2",
+	"version": "1.0.4",
 	"description": "Single Page Theme for UliCMS",
 	"categories": [
 		"theme",
 		"single-page",
 		"design"
 	],
-	"compatible_from": "2020.2.2",
+	"compatible_from": "2023.1",
 	"dependencies": []
 }
